@@ -13,7 +13,7 @@ public class CustomerServletContainer implements EmbeddedServletContainerCustomi
 
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
-		container.setPort(8888);
+//		container.setPort(8888);
 		container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/404.html"));
 		container.setSessionTimeout(10, TimeUnit.MINUTES);
 	}
