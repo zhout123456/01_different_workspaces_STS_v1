@@ -26,10 +26,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		
+		<!-- 第七章.Spring Boot的Web开发——7.6.WebSocket——7.6.3.实战——3.点对点式：
+		-添加Spring Security的starter pom -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
