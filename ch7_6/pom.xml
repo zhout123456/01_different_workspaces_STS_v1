@@ -11,9 +11,9 @@
 	</parent>
 	
 	<groupId>com.wisely</groupId>
-	<artifactId>ch7_4</artifactId>
+	<artifactId>ch7_6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ch7_4</name>
+	<name>ch7_6</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
