@@ -18,13 +18,19 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		/** 3.注册一个STOMP的endpoint，并指定使用SockJS协议。 */
 		registry.addEndpoint("/endpointWisely").withSockJS();
+		
+		/** 第七章.Spring Boot的Web开发——7.6.WebSocket——7.6.3.实战——2.广播式：配置WebSocket
+		 * 1.注册一个名为/endpointChat的endpoint*/
+		registry.addEndpoint("endpointChat").withSockJS();
 	}
 	
 	/** 4.配置消息代理（Message Broker）。 */
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry registry) {
 		/** 5.广播式应配置一个/topic消息代理。 */
-		registry.enableSimpleBroker("/topic");
+		/** 第七章.Spring Boot的Web开发——7.6.WebSocket——7.6.3.实战——2.广播式：配置WebSocket
+		 * 2.点对点式应增加一个/queue消息代理。*/
+		registry.enableSimpleBroker("/topic", "/queue");
 	}
 
 }
