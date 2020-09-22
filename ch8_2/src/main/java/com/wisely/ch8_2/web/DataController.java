@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wisely.ch8_2.dao.PersonRepository;
+import com.wisely.ch8_2.dao.PersonRepository2;
 import com.wisely.ch8_2.domain.Person;
 
 @RestController
@@ -95,7 +96,15 @@ public class DataController {
 		return pagePeople;
 	}
 	
+	@Autowired
+	PersonRepository2 personRepository2;
 	
+	@RequestMapping("/auto")
+	public Page<Person> auto(Person person) {
+		Page<Person> pagePeople	= personRepository2.findByAuto(person, new PageRequest(0,10));
+		
+		return pagePeople;
+	}
 	
 
 }
