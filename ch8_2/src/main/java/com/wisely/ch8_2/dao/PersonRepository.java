@@ -25,8 +25,4 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 	/** 8.2.3 使用@NamedQuery查询，请注意我们在实体类中做的@NamedQuery的定义。 */
 	List<Person> withNameAndAddressNamedQuery(String name, String address);
 
-	static Page<Person> findByAuto(Person person, PageRequest pageRequest) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
