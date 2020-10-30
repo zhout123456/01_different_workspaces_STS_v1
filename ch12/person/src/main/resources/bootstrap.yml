@@ -1,0 +1,13 @@
+# 指定 Config Server
+
+spring:
+  application:
+    name: person
+  cloud:    config:      enable: true
+    discovery:
+      enable: true
+      service-id: CONFIG # 1.
+eureka:  instance:    non-secure-port: ${server.port:8082}
+  client:    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/      
+      
